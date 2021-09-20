@@ -1,7 +1,7 @@
 # 03-Accountancies
 Keep track of your accountancies - editable tables that sum columns
 
-![Alt Text](https://github.com/AnnaZaragoza/accountancies/blob/9da425a8ad5937f3786fa7637a26b3ef51a804a7/gif/gif.gif)
+![Alt Text](https://raw.githubusercontent.com/AnnaZaragoza/03-Accountancies/main/accountancies/gif/gif.gif)
 
 # Exercice to start practicing with JS:
 * Interactive table (to be able to know where you are)
