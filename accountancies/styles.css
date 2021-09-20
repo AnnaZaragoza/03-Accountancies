@@ -1,0 +1,129 @@
+body {
+  font-family: arial;
+  margin: 0px;
+}
+
+#slideshow-container {
+  width: 900px;
+  margin: auto;
+  padding-top: 15px;
+  position: relative;
+}
+
+table, th, td {
+  width: 750px;
+  margin: auto;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+table{
+  border: white;
+  border-radius: 5px;
+  display: none;
+  box-shadow: 1px 2px 10px #cccccc;
+}
+
+th {
+  background-color: black;
+  color: white;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 40px;
+}
+
+th:first-child{
+  border-radius: 7px 0px 0px 0px;
+}
+
+th:last-child{
+  border-radius: 0px 7px 0px 0px;
+}
+
+tr {
+  border-bottom: 1px solid #cccccc;
+}
+
+tr:nth-child(even){
+  background-color: #f2f2f2;
+}
+
+tr:hover{
+  background-color: #e6f5ff;
+  transition: all 500ms;
+}
+
+td{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 40px;
+}
+
+td:hover{
+  background-color: #ccebff;
+  transition: all 1000ms;
+}
+
+tfoot tr:last-child{
+  font-weight: bold;
+  border: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: #cccccc;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 3px;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  color: black;
+}
+
+/* The dots/bullets/indicators */
+.select-year {
+  cursor: pointer;
+  margin: 20px 15px 0px 15px;
+  font-weight: bold;
+  display: inline-block;
+  transition: color 0.6s ease;
+  color: #cccccc;
+}
+
+.active, .dot:hover {
+  color: black;
+}
+
+/* Fading animation */
+table {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
