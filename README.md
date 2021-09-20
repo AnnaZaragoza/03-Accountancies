@@ -11,7 +11,7 @@ As the app was evolving, I decided to add the functionality of editing the cells
 
 # Exercice to start practicing JS:
 * Interactive table, highlighting where you are
-* Sum columns functions
+* Sum columns function
 * Slideshow / Carousel
 * (In progress) Editable table with limit of characters
 
