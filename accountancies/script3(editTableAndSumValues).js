@@ -32,6 +32,27 @@ editTds("twenty");
 editTds("nineteen");
 editTds("eighteen");
 
+// Trying to integrate this function when the content of the tds are changing:
+function sumColumnAndShowTotal(tableId, colNumber){
+  var total = 0;
+
+   var table = document.getElementById(tableId);
+   var tableBody = table.getElementsByTagName("tbody").item(0);
+   var i;
+   var rows = tableBody.rows.length;
+
+   for (i=0; i<rows; i++){
+     var thisTrBody = tableBody.rows[i];
+     var thisTdBody = thisTrBody.cells[colNumber];
+     var thisTextNode = thisTdBody.childNodes.item(0);
+
+     var thisNumber = parseFloat(thisTextNode.data);
+     total += thisNumber;
+   }
+
+   table.getElementsByTagName("tfoot").item(0).rows[0].cells[colNumber].innerHTML = total;
+}
+
 
 // Trying to convert tds elements into inputs:
 /*
