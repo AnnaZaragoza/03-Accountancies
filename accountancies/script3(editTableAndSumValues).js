@@ -1,26 +1,29 @@
 'use strict'
 
-'use strict'
-
 function editTds (tableId){
   var table = document.getElementById(tableId);
   var tableBody = table.getElementsByTagName('tbody').item(0);
-  var tds = tableBody.querySelectorAll('tr td:nth-last-child(-n+3)'); //allow editing last three tds only
+  var tds = tableBody.querySelectorAll('tr td:nth-last-child(-n+3)'); // allow editing last three tds only
 
   for(var i=0; i<tds.length; i++) {
-    //content editable
+    // content editable
     tds[i].contentEditable = 'true';
 
-    //max 4 numbers editable & only integer numbers
-    tds[i].addEventListener("keypress", function (e){
-        if(this.innerHTML.length >= 4 || isNaN(this.innerHTML)){
-            e.preventDefault();
-            return false;
-        }
+    // max 4 characters editable
+    tds[i].addEventListener('keypress', function(e){
+      if(this.innerHTML.length >= 4) {
+        e.preventDefault();
+        return false;
+      }
     }, false);
 
-    //
-
+    // only type integer numbers
+    tds[i].addEventListener('keydown', e=> {
+      var keys = event.charCode || event.keyCode;
+      if(isNaN(String.fromCharCode(e.which)) && keys!=46 && keys!=8 && !e.key.match(/^[0-9]/g)){
+        e.preventDefault();
+      }
+    });
   }
 }
 
