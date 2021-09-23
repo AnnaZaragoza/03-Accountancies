@@ -6,8 +6,8 @@ Keep track of your accountancies - check how much income came on you account
 # Description:
 App created out of the need to check the amount of money my partner and I were putting on our sharing account, so far this year and the last 3.
 As our excel licence expired, I decided to make the tables in HTML and CSS and do the operations in JS.
-The app consists on 4 tables (from the year 2021 to the 2018) that show the standing order recived each month and by who, and calculate the total at the end of each column.
-As the app was evolving, I decided to add the functionality of editing the cells (which is what I am working right now).
+The app consists on 4 tables (from the year 2021 to the 2018) that show the standing order received each month and by who, and calculate the total at the end of each column.
+As the app was evolving, I decided to add the functionality of editing the cells and change then the result, according to the new input (which is what I am working right now).
 
 # Exercice to start practicing JS:
 * Interactive table, highlighting where you are
