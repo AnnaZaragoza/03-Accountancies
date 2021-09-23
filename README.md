@@ -1,5 +1,5 @@
 # 03-Accountancies
-Keep track of your accountancies - editable tables that sum columns
+Keep track of your accountancies - check how much income came on you account
 
 ![Alt Text](https://raw.githubusercontent.com/AnnaZaragoza/03-Accountancies/main/accountancies/gif/gif.gif)
 
