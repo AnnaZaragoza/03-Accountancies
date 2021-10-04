@@ -28,7 +28,7 @@ function editTds (tableId, colNumber){
       }
     });
 
-    // sum content NOT WORKING!!
+    // sum content NOT WORKING!! - the event 'change' do not work on content editable
     /*
     tds.forEach (td => {
       td.addEventListener('change', function(){
