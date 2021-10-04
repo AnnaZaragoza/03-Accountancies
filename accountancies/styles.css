@@ -53,13 +53,14 @@ tr:hover{
   transition: all 500ms;
 }
 
-td{
+td, input{
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 40px;
+  border: none;
 }
 
-td:hover{
+td:hover, input:hover{
   background-color: #ccebff;
   transition: all 1000ms;
 }
