@@ -20,6 +20,16 @@ function editTableAndSumValues(tableId){
         this.value = this.value.slice(0,4);
       }
     })
+    input.addEventListener('click', function(){
+      if(this.value == 0){
+        this.value = '';
+      }
+    })
+    input.addEventListener('blur', function(){
+      if(this.value == ''){
+        this.value = 0;
+      }
+    })
   })
 
   inputsTwo.forEach (input => {
@@ -35,6 +45,16 @@ function editTableAndSumValues(tableId){
         this.value = this.value.slice(0,4);
       }
     })
+    input.addEventListener('click', function(){
+      if(this.value == 0){
+        this.value = '';
+      }
+    })
+    input.addEventListener('blur', function(){
+      if(this.value == ''){
+        this.value = 0;
+      }
+    })
   })
 
   inputsThree.forEach (input => {
@@ -48,6 +68,16 @@ function editTableAndSumValues(tableId){
     input.addEventListener('input', function(){
       if(this.value.length >= 6){
         this.value = this.value.slice(0,4);
+      }
+    })
+    input.addEventListener('click', function(){
+      if(this.value == 0){
+        this.value = '';
+      }
+    })
+    input.addEventListener('blur', function(){
+      if(this.value == ''){
+        this.value = 0;
       }
     })
   })
