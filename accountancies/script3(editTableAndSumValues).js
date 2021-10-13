@@ -15,6 +15,11 @@ function editTableAndSumValues(tableId){
       }
       table.getElementsByTagName("tfoot").item(0).rows[0].cells[1].innerHTML = sum;
     });
+    input.addEventListener('input', function(){
+      if(this.value.length >= 6){
+        this.value = this.value.slice(0,4);
+      }
+    })
   })
 
   inputsTwo.forEach (input => {
@@ -25,6 +30,11 @@ function editTableAndSumValues(tableId){
       }
       table.getElementsByTagName("tfoot").item(0).rows[0].cells[2].innerHTML = sum;
     });
+    input.addEventListener('input', function(){
+      if(this.value.length >= 6){
+        this.value = this.value.slice(0,4);
+      }
+    })
   })
 
   inputsThree.forEach (input => {
@@ -35,6 +45,11 @@ function editTableAndSumValues(tableId){
       }
       table.getElementsByTagName("tfoot").item(0).rows[0].cells[3].innerHTML = sum;
     });
+    input.addEventListener('input', function(){
+      if(this.value.length >= 6){
+        this.value = this.value.slice(0,4);
+      }
+    })
   })
 }
 
