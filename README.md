@@ -13,7 +13,7 @@ As the app was evolving, I decided to add the functionality of editing the cells
 * Interactive table, highlighting where you are
 * Slideshow / Carousel (script1)
 * Sum columns (script2)
-* Editable content (script3)
+* Editable content, with a limit of characters (script3)
 
 # References:
 * http://www1.udel.edu/CIS/474/pconrad/06S/topics/javascript/examples/tables/sumOfAColumn.html
