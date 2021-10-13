@@ -1,52 +1,72 @@
 'use strict'
 
-//var contentOfTd = tdEditable.getElementById("td-editable").textContent;
-//console.log(contentOfTd);
-
-function editTds (tableId, colNumber){
+function editTableAndSumValues(tableId){
   var table = document.getElementById(tableId);
-  var tableBody = table.getElementsByTagName('tbody').item(0);
-  var tds = tableBody.querySelectorAll('tr td:nth-last-child(-n+3)'); // allow editing last three tds only
 
-  for(var i=0; i<tds.length; i++) {
-    // content editable
-    tds[i].contentEditable = 'true';
+  var inputsOne = table.querySelectorAll('.editable-field-one');
+  var inputsTwo = table.querySelectorAll('.editable-field-two');
+  var inputsThree = table.querySelectorAll('.editable-field-three');
 
-    // max 4 characters editable
-    tds[i].addEventListener('keypress', function(e){
-      if(this.innerHTML.length >= 4) {
-        e.preventDefault();
-        return false;
+  inputsOne.forEach (input => {
+    input.addEventListener('change', function(){
+      var sum = 0;
+      for(var i=0; i<inputsOne.length; i++){
+        sum += parseFloat(inputsOne[i].value);
       }
-    }, false);
+      table.getElementsByTagName("tfoot").item(0).rows[0].cells[1].innerHTML = sum;
+    });
+  })
 
-    // only type integer numbers
-    tds[i].addEventListener('keydown', e=> {
-      var keys = event.charCode || event.keyCode;
-      if(isNaN(String.fromCharCode(e.which)) && keys!=46 && keys!=8 && !e.key.match(/^[0-9]/g)){
-        e.preventDefault();
+  inputsTwo.forEach (input => {
+    input.addEventListener('change', function(){
+      var sum = 0;
+      for(var i=0; i<inputsTwo.length; i++){
+        sum += parseFloat(inputsTwo[i].value);
       }
+      table.getElementsByTagName("tfoot").item(0).rows[0].cells[2].innerHTML = sum;
     });
+  })
 
-    // sum content NOT WORKING!! - the event 'change' do not work on content editable
-    /*
-    tds.forEach (td => {
-      td.addEventListener('change', function(){
-        var sum = 0;
-        for(var i=0; i<tds.length; i++){
-          sum += parseFloat(tds[i].data);
-        }
-        table.getElementsByTagName("tfoot").item(0).rows[0].cells[colNumber].innerHTML = sum;
-        console.log(sum);
-      });
+  inputsThree.forEach (input => {
+    input.addEventListener('change', function(){
+      var sum = 0;
+      for(var i=0; i<inputsThree.length; i++){
+        sum += parseFloat(inputsThree[i].value);
+      }
+      table.getElementsByTagName("tfoot").item(0).rows[0].cells[3].innerHTML = sum;
     });
-    */
-  }
+  })
 }
 
-editTds("twenty-one", 1);
-editTds("twenty-one", 2);
-editTds("twenty-one", 3);
-editTds("twenty");
-editTds("nineteen");
-editTds("eighteen");
+editTableAndSumValues("twenty-one");
+editTableAndSumValues("twenty");
+editTableAndSumValues("nineteen");
+editTableAndSumValues("eighteen");
+
+// Trying to convert tds elements into inputs:
+/*
+var table = document.getElementById('twenty-one');
+var tableBody = table.getElementsByTagName('tbody').item(0);
+var tds = tableBody.querySelectorAll('tr td:nth-last-child(-n+3)'); //allow editing last three tds only
+
+for(var i=0; i<tds.length; i++) {
+  tds[i].addEventListener("click", ()=>{
+    console.log('you clicked me!');
+    // change <td> element per <input> element:
+    /*
+    var replaceElement = document.getElementById('td-editable-as-input');
+    var newElement = document.createElement('input');
+    newElement.innerHTML = '<input type="number">';
+    replaceElement.parentNode.replaceChild(newElement, replaceElement);
+    */
+    // change <td> elements per <input> elements: (NOT WORKING)
+    /*
+    var replaceElements = document.getElementsByTagName('td');
+    var newElements = document.createElement('input');
+    newElements.innerHTML = '<input>';
+    replaceElements.parentNode.replaceChild(newElements, replaceElements);
+    */
+    /*
+  });
+}
+*/
