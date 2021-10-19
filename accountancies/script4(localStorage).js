@@ -37,6 +37,7 @@ var colM = JSON.parse(localStorage.getItem("dataM"));
 
 
 // Individual value (from an ID): IT WORKS!!!
+/*
 var button = document.querySelector('#button');
 button.addEventListener('click', function(){
   var valueDecM = document.getElementById('dec').value;
@@ -45,23 +46,36 @@ button.addEventListener('click', function(){
 
 var newValueDecM = parseInt(JSON.parse(localStorage.getItem("valueDecM")));
 document.getElementById('dec').value = newValueDecM;
+*/
 
-//var button = document.querySelector('#button');
-//button.addEventListener('click', function(){
-//  var table = document.getElementById("twenty-one");
-//  var inputsOne = table.querySelectorAll('.editable-field-one');
+function storeValues (tableId){
+  var button = document.querySelector('#button');
+  var table = document.getElementById(tableId);
+  var inputsOne = table.querySelectorAll('.editable-field-one');
+  var inputsTwo = table.querySelectorAll('.editable-field-two');
+  var inputsThree = table.querySelectorAll('.editable-field-three');
 
-//  for(var i=0; i<inputsOne.length; i++){
-//    console.log(inputsOne[i].value);
-    /* Trying to put the values in an array:
-    var valuesM = [];
-    console.log(valuesM.push(inputsOne[i].value));
-    */
-//  }
+  button.addEventListener('click', function(){
+    var valuesOne = [];
+    for(var i=0; i<inputsOne.length; i++){
+      valuesOne.push(inputsOne[i].value);
+    }
+    console.log(valuesOne);
 
-  //localStorage.setItem("valueDecM", JSON.stringify(valueDecM));
-//});
+    localStorage.setItem("valuesOne", JSON.stringify(valuesOne));
+  });
 
+  var newValuesOne = JSON.parse(localStorage.getItem("valuesOne"));
+  console.log(newValuesOne);
+  for(var i=0; i<inputsOne.length; i++){
+    inputsOne[i].append(newValuesOne);
+  }
 
-//var newValueDecM = JSON.parse(localStorage.getItem("valueDecM"));
-//document.getElementById('dec').value = parseInt(newValueDecM);
+  //var table = document.getElementById("twenty-one");
+  //table.querySelectorAll('.editable-field-one').value = parseFloat(newValuesOne);
+
+  //var newValueDecM = JSON.parse(localStorage.getItem("valueDecM"));
+  //document.getElementById('dec').value = parseInt(newValueDecM);
+}
+
+storeValues("twenty-one");
