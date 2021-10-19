@@ -9,7 +9,7 @@ As our excel licence expired, I decided to make the tables in HTML and CSS and d
 The app consists on 4 tables (from the year 2021 to the 2018) that show the standing order received each month and by who, and calculate the total at the end of each column.
 As the app was evolving, I decided to add the functionality of editing the cells and change then the result, according to the new input.
 
-# Exercice to start practicing JS:
+# Exercice to practice JS:
 * Interactive table, highlighting where you are
 * Slideshow / Carousel (script1)
 * Sum columns (script2)
