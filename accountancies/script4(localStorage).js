@@ -10,7 +10,7 @@ if(typeof(Storage) !== 'undefined'){
 */
 
 /* First try:
-var button = document.querySelector('#button');
+const button = document.querySelector('#button');
 button.addEventListener('click', function(){
 
   var dataM = {
@@ -32,32 +32,32 @@ button.addEventListener('click', function(){
   console.log(dataM);
 });
 
-var colM = JSON.parse(localStorage.getItem("dataM"));
+const colM = JSON.parse(localStorage.getItem("dataM"));
 */
 
 
 // Individual value (from an ID): IT WORKS!!!
 /*
-var button = document.querySelector('#button');
+const button = document.querySelector('#button');
 button.addEventListener('click', function(){
-  var valueDecM = document.getElementById('dec').value;
+  const valueDecM = document.getElementById('dec').value;
   localStorage.setItem("valueDecM", JSON.stringify(valueDecM));
 });
 
-var newValueDecM = parseInt(JSON.parse(localStorage.getItem("valueDecM")));
+const newValueDecM = parseInt(JSON.parse(localStorage.getItem("valueDecM")));
 document.getElementById('dec').value = newValueDecM;
 */
 
 function storeValues (tableId){
-  var button = document.querySelector('#button');
-  var table = document.getElementById(tableId);
-  var inputsOne = table.querySelectorAll('.editable-field-one');
-  var inputsTwo = table.querySelectorAll('.editable-field-two');
-  var inputsThree = table.querySelectorAll('.editable-field-three');
+  const button = document.querySelector('#button');
+  const table = document.getElementById(tableId);
+  const inputsOne = table.querySelectorAll('.editable-field-one');
+  const inputsTwo = table.querySelectorAll('.editable-field-two');
+  const inputsThree = table.querySelectorAll('.editable-field-three');
 
   button.addEventListener('click', function(){
-    var valuesOne = [];
-    for(var i=0; i<inputsOne.length; i++){
+    let valuesOne = [];
+    for(let i=0; i<inputsOne.length; i++){
       valuesOne.push(inputsOne[i].value);
     }
     console.log(valuesOne);
@@ -65,16 +65,16 @@ function storeValues (tableId){
     localStorage.setItem("valuesOne", JSON.stringify(valuesOne));
   });
 
-  var newValuesOne = JSON.parse(localStorage.getItem("valuesOne"));
+  const newValuesOne = JSON.parse(localStorage.getItem("valuesOne"));
   console.log(newValuesOne);
-  for(var i=0; i<inputsOne.length; i++){
+  for(let i=0; i<inputsOne.length; i++){
     inputsOne[i].append(newValuesOne);
   }
 
-  //var table = document.getElementById("twenty-one");
+  //const table = document.getElementById("twenty-one");
   //table.querySelectorAll('.editable-field-one').value = parseFloat(newValuesOne);
 
-  //var newValueDecM = JSON.parse(localStorage.getItem("valueDecM"));
+  //const newValueDecM = JSON.parse(localStorage.getItem("valueDecM"));
   //document.getElementById('dec').value = parseInt(newValueDecM);
 }
 
