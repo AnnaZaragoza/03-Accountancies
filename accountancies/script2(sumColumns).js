@@ -2,19 +2,19 @@
 
 // Sum columns on the tables
 function sumColumnAndShowTotal(tableId, colNumber){
-  var total = 0;
+  let total = 0;
 
-   var table = document.getElementById(tableId);
-   var tableBody = table.getElementsByTagName("tbody").item(0);
-   var i;
-   var rows = tableBody.rows.length;
+   const table = document.getElementById(tableId);
+   const tableBody = table.getElementsByTagName("tbody").item(0);
+   const i;
+   const rows = tableBody.rows.length;
 
-   for (i=0; i<rows; i++){
-     var thisTrBody = tableBody.rows[i];
-     var thisTdBody = thisTrBody.cells[colNumber];
-     var thisTextNode = thisTdBody.childNodes.item(0);
+   for (let i=0; i<rows; i++){
+     const thisTrBody = tableBody.rows[i];
+     const thisTdBody = thisTrBody.cells[colNumber];
+     const thisTextNode = thisTdBody.childNodes.item(0);
 
-     var thisNumber = parseFloat(thisTextNode.data);
+     const thisNumber = parseFloat(thisTextNode.data);
      total += thisNumber;
    }
 
