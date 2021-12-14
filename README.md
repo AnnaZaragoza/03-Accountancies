@@ -14,7 +14,7 @@ As the app was evolving, I decided to add the functionality of editing the cells
 * Slideshow / Carousel (script1)
 * Sum columns (script2)
 * Editable content, with a limit of characters (script3)
-* Save data in local storage (script4)
+* Save data in local storage (script4) - in process
 
 # References:
 * http://www1.udel.edu/CIS/474/pconrad/06S/topics/javascript/examples/tables/sumOfAColumn.html
