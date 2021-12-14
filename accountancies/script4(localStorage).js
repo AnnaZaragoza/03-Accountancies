@@ -57,12 +57,25 @@ function storeValues (tableId){
 
   button.addEventListener('click', function(){
     let valuesOne = [];
+    let valuesTwo = [];
+    let valuesThree = [];
+
     for(let i=0; i<inputsOne.length; i++){
       valuesOne.push(inputsOne[i].value);
     }
+    for(let i=0; i<inputsTwo.length; i++){
+      valuesTwo.push(inputsTwo[i].value);
+    }
+    for(let i=0; i<inputsThree.length; i++){
+      valuesThree.push(inputsThree[i].value);
+    }
     console.log(valuesOne);
+    console.log(valuesTwo);
+    console.log(valuesThree);
 
     localStorage.setItem("valuesOne", JSON.stringify(valuesOne));
+    localStorage.setItem("valuesTwo", JSON.stringify(valuesTwo));
+    localStorage.setItem("valuesThree", JSON.stringify(valuesThree));
   });
 
   const newValuesOne = JSON.parse(localStorage.getItem("valuesOne"));
@@ -70,12 +83,25 @@ function storeValues (tableId){
   for(let i=0; i<inputsOne.length; i++){
     inputsOne[i].append(newValuesOne);
   }
+  const newValuesTwo = JSON.parse(localStorage.getItem("valuesTwo"));
+  console.log(newValuesTwo);
+  for(let i=0; i<inputsTwo.length; i++){
+    inputsTwo[i].append(newValuesTwo);
+  }
+  const newValuesThree = JSON.parse(localStorage.getItem("valuesThree"));
+  console.log(newValuesThree);
+  for(let i=0; i<inputsThree.length; i++){
+    inputsThree[i].append(newValuesThree);
+  }
+}
 
   //const table = document.getElementById("twenty-one");
   //table.querySelectorAll('.editable-field-one').value = parseFloat(newValuesOne);
 
   //const newValueDecM = JSON.parse(localStorage.getItem("valueDecM"));
   //document.getElementById('dec').value = parseInt(newValueDecM);
-}
 
 storeValues("twenty-one");
+storeValues("twenty");
+storeValues("nineteen");
+storeValues("eighteen");
