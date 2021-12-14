@@ -10,7 +10,8 @@ body {
 }
 
 table{
-  width: 900px;
+  table-layout: fixed;
+  width: 90%;
   margin: auto;
   text-align: left;
   border-collapse: collapse;
@@ -20,7 +21,6 @@ table{
 }
 
 table thead tr th{
-  width: 25%;
   text-align: center;
   border-left: 1px solid white;
 }
@@ -50,10 +50,6 @@ tr {
   border-bottom: 1px solid #cccccc;
 }
 
-table td{
-  width: 25%;
-}
-
 table tbody tr td{
   border-left: 1px solid #cccccc;
 }
@@ -68,6 +64,7 @@ td.month{
 }
 
 input{
+  width: 60%;
   text-align: right;
   padding: 15px 35px 15px 40px;
   border: none;
@@ -184,4 +181,3 @@ table {
   from {opacity: .4}
   to {opacity: 1}
 }
-
