@@ -68,9 +68,8 @@ td.month{
 }
 
 input{
-  width: auto;
   text-align: right;
-  padding: 15px 40px 15px 40px;
+  padding: 15px 35px 15px 40px;
   border: none;
   outline-color: #cccccc;
 }
@@ -149,6 +148,25 @@ tfoot tr:last-child{
   color: black;
 }
 
+.button{
+  text-align: center;
+  margin: 30px 0px;
+}
+
+.button button{
+  background-color: #cccccc;
+  padding: 10px 40px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 7px
+}
+
+.button button:hover{
+  background-color: #ccebff;
+  transition: all 1000ms;
+}
+
 /* Fading animation */
 table {
   -webkit-animation-name: fade;
@@ -166,3 +184,4 @@ table {
   from {opacity: .4}
   to {opacity: 1}
 }
+
