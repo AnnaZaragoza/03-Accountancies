@@ -1,5 +1,5 @@
-# 04-Accountancies
-Keep track of your accountancies - check how much income you had this year.
+# 04-Accountancy
+Keep track of your accountancy - check how much income you had this year.
 
 ![Alt Text](https://raw.githubusercontent.com/AnnaZaragoza/03-Accountancies/main/accountancies/gif/gif.gif)
 
