@@ -16,6 +16,9 @@ As the app was evolving, I decided to add the functionality of editing the cells
 * Editable content, with a limit of characters (script3)
 * Save data in local storage (script4) - in process
 
+# Check the site in here:
+[Accountancy]()
+
 # References:
 * http://www1.udel.edu/CIS/474/pconrad/06S/topics/javascript/examples/tables/sumOfAColumn.html
 * https://www.w3schools.com/howto/howto_js_slideshow.asp
