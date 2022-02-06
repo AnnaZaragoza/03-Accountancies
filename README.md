@@ -1,7 +1,7 @@
 # 04-Accountancy
 Keep track of your accountancy - check how much income you had this year.
 
-![Alt Text](https://raw.githubusercontent.com/AnnaZaragoza/03-Accountancies/main/accountancies/gif/gif.gif)
+![Alt Text](https://github.com/AnnaZaragoza/04-Accountancy/blob/d11bb2618797da407c14826c27cc0e6cde232646/gif/gif.gif)
 
 # Description:
 App created out of the need to check the amount of money my partner and I were putting on our sharing account, so far this year and the last 3.
