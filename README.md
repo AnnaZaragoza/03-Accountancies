@@ -1,4 +1,4 @@
-# 04-Accountancy
+# Accountancy
 Keep track of your accountancy - check how much income you had this year.
 
 ![Alt Text](https://github.com/AnnaZaragoza/04-Accountancy/blob/d11bb2618797da407c14826c27cc0e6cde232646/gif/gif.gif)
