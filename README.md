@@ -17,7 +17,7 @@ As the app was evolving, I decided to add the functionality of editing the cells
 * Save data in local storage (script4) - in process
 
 # Check the site in here:
-[Accountancy]()
+[Accountancy](https://accountancysumincomesmonth.netlify.app/)
 
 # References:
 * http://www1.udel.edu/CIS/474/pconrad/06S/topics/javascript/examples/tables/sumOfAColumn.html
