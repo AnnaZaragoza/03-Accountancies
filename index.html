@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Accountancy</title>
+    <link rel="icon" href="favicon.png" />
+
+    <meta charset="UTF-8" />
+    <meta name="author" content="Anna Zaragoza" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="responsive.css" />
+  </head>
+
+  <body>
+    <div id="slideshow-container">
+      <!-- Select year -->
+      <div style="text-align: center; padding: 15px 0px 30px 0px">
+        <span class="select-year" onclick="currentSlide(1)">2021</span>
+        <span class="select-year" onclick="currentSlide(2)">2020</span>
+        <span class="select-year" onclick="currentSlide(3)">2019</span>
+        <span class="select-year" onclick="currentSlide(4)">2018</span>
+      </div>
+
+      <table id="twenty-one">
+        <thead>
+          <tr>
+            <th>&nbsp;&nbsp;&nbsp;Month</th>
+            <th>M</th>
+            <th>A</th>
+            <th>B</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;December</td>
+            <td>
+              <input
+                type="number"
+                name="december"
+                value="0"
+                class="editable-field-one"
+                id="dec"
+              />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-two" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-three" />
+            </td>
+          </tr>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;November</td>
+            <td>
+              <input
+                type="number"
+                value="0"
+                class="editable-field-one"
+                id="nov"
+              />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-two" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-three" />
+            </td>
+          </tr>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;October</td>
+            <td>
+              <input
+                type="number"
+                value="0"
+                class="editable-field-one"
+                id="oct"
+              />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-two" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-three" />
+            </td>
+          </tr>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;September&nbsp;&nbsp;&nbsp;</td>
+            <td>
+              <input
+                type="number"
+                value="0"
+                class="editable-field-one"
+                id="sept"
+              />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-two" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-three" />
+            </td>
+          </tr>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;August</td>
+            <td>
+              <input
+                type="number"
+                value="0"
+                class="editable-field-one"
+                id="aug"
+              />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-two" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-three" />
+            </td>
+          </tr>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;July</td>
+            <td>
+              <input
+                type="number"
+                value="0"
+                class="editable-field-one"
+                id="jul"
+              />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-two" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-three" />
+            </td>
+          </tr>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;June</td>
+            <td>
+              <input
+                type="number"
+                value="0"
+                class="editable-field-one"
+                id="juny"
+              />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-two" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-three" />
+            </td>
+          </tr>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;May</td>
+            <td>
+              <input
+                type="number"
+                value="0"
+                class="editable-field-one"
+                id="may"
+              />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-two" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-three" />
+            </td>
+          </tr>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;April</td>
+            <td>
+              <input
+                type="number"
+                value="0"
+                class="editable-field-one"
+                id="april"
+              />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-two" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-three" />
+            </td>
+          </tr>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;Mars</td>
+            <td>
+              <input
+                type="number"
+                value="0"
+                class="editable-field-one"
+                id="mars"
+              />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-two" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-three" />
+            </td>
+          </tr>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;February</td>
+            <td>
+              <input
+                type="number"
+                value="0"
+                class="editable-field-one"
+                id="feb"
+              />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-two" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-three" />
+            </td>
+          </tr>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;January</td>
+            <td>
+              <input
+                type="number"
+                value="0"
+                class="editable-field-one"
+                id="jan"
+              />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-two" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-three" />
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;Total</td>
+            <td><span id="total-one"></span></td>
+            <td><span id="total-two"></span></td>
+            <td><span id="total-three"></span></td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <table id="twenty">
+        <thead>
+          <tr>
+            <th>Month</th>
+            <th>M</th>
+            <th>A</th>
+            <th>B</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;December</td>
+            <td>
+              <input type="number" value="0" class="editable-field-one" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-two" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-three" />
+            </td>
+          </tr>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;November</td>
+            <td>
+              <input type="number" value="0" class="editable-field-one" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-two" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-three" />
+            </td>
+          </tr>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;October</td>
+            <td>
+              <input type="number" value="0" class="editable-field-one" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-two" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-three" />
+            </td>
+          </tr>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;September&nbsp;</td>
+            <td>
+              <input type="number" value="0" class="editable-field-one" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-two" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-three" />
+            </td>
+          </tr>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;August</td>
+            <td>
+              <input type="number" value="0" class="editable-field-one" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-two" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-three" />
+            </td>
+          </tr>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;July</td>
+            <td>
+              <input type="number" value="0" class="editable-field-one" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-two" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-three" />
+            </td>
+          </tr>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;June</td>
+            <td>
+              <input type="number" value="0" class="editable-field-one" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-two" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-three" />
+            </td>
+          </tr>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;May</td>
+            <td>
+              <input type="number" value="0" class="editable-field-one" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-two" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-three" />
+            </td>
+          </tr>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;April</td>
+            <td>
+              <input type="number" value="0" class="editable-field-one" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-two" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-three" />
+            </td>
+          </tr>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;Mars</td>
+            <td>
+              <input type="number" value="0" class="editable-field-one" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-two" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-three" />
+            </td>
+          </tr>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;February</td>
+            <td>
+              <input type="number" value="0" class="editable-field-one" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-two" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-three" />
+            </td>
+          </tr>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;January</td>
+            <td>
+              <input type="number" value="0" class="editable-field-one" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-two" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-three" />
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;Total</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <table id="nineteen">
+        <thead>
+          <tr>
+            <th>Month</th>
+            <th>M</th>
+            <th>A</th>
+            <th>B</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;December</td>
+            <td>
+              <input type="number" value="0" class="editable-field-one" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-two" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-three" />
+            </td>
+          </tr>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;November</td>
+            <td>
+              <input type="number" value="0" class="editable-field-one" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-two" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-three" />
+            </td>
+          </tr>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;October</td>
+            <td>
+              <input type="number" value="0" class="editable-field-one" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-two" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-three" />
+            </td>
+          </tr>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;September&nbsp;</td>
+            <td>
+              <input type="number" value="0" class="editable-field-one" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-two" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-three" />
+            </td>
+          </tr>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;August</td>
+            <td>
+              <input type="number" value="0" class="editable-field-one" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-two" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-three" />
+            </td>
+          </tr>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;July</td>
+            <td>
+              <input type="number" value="0" class="editable-field-one" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-two" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-three" />
+            </td>
+          </tr>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;June</td>
+            <td>
+              <input type="number" value="0" class="editable-field-one" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-two" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-three" />
+            </td>
+          </tr>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;May</td>
+            <td>
+              <input type="number" value="0" class="editable-field-one" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-two" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-three" />
+            </td>
+          </tr>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;April</td>
+            <td>
+              <input type="number" value="0" class="editable-field-one" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-two" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-three" />
+            </td>
+          </tr>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;Mars</td>
+            <td>
+              <input type="number" value="0" class="editable-field-one" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-two" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-three" />
+            </td>
+          </tr>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;February</td>
+            <td>
+              <input type="number" value="0" class="editable-field-one" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-two" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-three" />
+            </td>
+          </tr>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;January</td>
+            <td>
+              <input type="number" value="0" class="editable-field-one" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-two" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-three" />
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>&nbsp;&nbsp;&nbsp;Total</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <table id="eighteen">
+        <thead>
+          <tr>
+            <th>Month</th>
+            <th>M</th>
+            <th>A</th>
+            <th>B</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;December</td>
+            <td>
+              <input type="number" value="0" class="editable-field-one" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-two" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-three" />
+            </td>
+          </tr>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;November</td>
+            <td>
+              <input type="number" value="0" class="editable-field-one" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-two" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-three" />
+            </td>
+          </tr>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;October</td>
+            <td>
+              <input type="number" value="0" class="editable-field-one" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-two" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-three" />
+            </td>
+          </tr>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;September&nbsp;</td>
+            <td>
+              <input type="number" value="0" class="editable-field-one" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-two" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-three" />
+            </td>
+          </tr>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;August</td>
+            <td>
+              <input type="number" value="0" class="editable-field-one" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-two" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-three" />
+            </td>
+          </tr>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;July</td>
+            <td>
+              <input type="number" value="0" class="editable-field-one" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-two" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-three" />
+            </td>
+          </tr>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;June</td>
+            <td>
+              <input type="number" value="0" class="editable-field-one" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-two" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-three" />
+            </td>
+          </tr>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;May</td>
+            <td>
+              <input type="number" value="0" class="editable-field-one" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-two" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-three" />
+            </td>
+          </tr>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;April</td>
+            <td>
+              <input type="number" value="0" class="editable-field-one" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-two" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-three" />
+            </td>
+          </tr>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;Mars</td>
+            <td>
+              <input type="number" value="0" class="editable-field-one" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-two" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-three" />
+            </td>
+          </tr>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;February</td>
+            <td>
+              <input type="number" value="0" class="editable-field-one" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-two" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-three" />
+            </td>
+          </tr>
+          <tr>
+            <td class="month">&nbsp;&nbsp;&nbsp;January</td>
+            <td>
+              <input type="number" value="0" class="editable-field-one" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-two" />
+            </td>
+            <td>
+              <input type="number" value="0" class="editable-field-three" />
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>&nbsp;&nbsp;&nbsp;Total</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <!-- Next and Previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <!-- End slideshow-container -->
+
+    <script src="script1(carousel).js"></script>
+    <!-- <script src="script2(sumColumns).js"></script> -->
+    <script src="script3(editTableAndSumValues).js"></script>
+  </body>
+</html>
